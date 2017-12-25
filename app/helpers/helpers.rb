@@ -3,4 +3,7 @@ class Helpers
     @user = User.find(session[:user_id])
     @user
   end
+  def self.is_logged_in?
+    session[:user_id].nil?
+  end 
 end
