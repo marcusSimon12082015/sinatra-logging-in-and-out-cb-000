@@ -24,7 +24,6 @@ class ApplicationController < Sinatra::Base
   get '/account' do
     if Helpers.is_logged_in?(session)
       @user = User.find(session[:user_id])
-      #binding.pry
       erb :account
     else
       erb :error
@@ -32,7 +31,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/logout' do
-
+    session.delete(:user_id)
   end
 
 
