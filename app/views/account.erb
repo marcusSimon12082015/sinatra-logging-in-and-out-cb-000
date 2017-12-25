@@ -7,7 +7,7 @@
   </head>
   <body id="page-top">
   <h1>Welcome <%=@user.username %></h1>
-  <p>Balance : <%=@user.balance %></p>
+  <p>Balance : <%=@user.balance.to_f %></p>
   <a href="/logout">Log Out</a>
   </body>
 </html>
