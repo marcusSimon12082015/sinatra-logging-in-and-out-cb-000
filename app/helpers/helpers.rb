@@ -4,6 +4,6 @@ class Helpers
     @user
   end
   def self.is_logged_in?(session)
-    session.key?("user_id")
+    session.key?(:user_id)
   end
 end
